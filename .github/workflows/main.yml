@@ -1,8 +1,9 @@
 name: Java Spring Boot Pipeline
 
-on: 
+on:
   push:
-    branches: main
+    branches:
+      - main
 
 jobs:
   build:
@@ -10,20 +11,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Initialize Repo
         run: |
-         echo "This is DevOps Molvi"
-         uname -a
+          echo "This is DevOps Molvi"
+          uname -a
 
-          - name: Check the Docker installation
-          run: |
-          docker 
+      - name: Check Docker Installation
+        run: |
+          docker --version
           docker images
 
-         - name: Run Docker Container
-          run: |
+      - name: Run Docker Container
+        run: |
           docker run hello-world
-        
-        
-    
