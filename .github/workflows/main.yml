@@ -14,7 +14,7 @@ jobs:
 
       - name: Initialize Repo
         run: |
-          echo "This is DevOps Molvi"
+          echo "This is DevOps Test file"
           uname -a
 
       - name: Check Docker Installation
