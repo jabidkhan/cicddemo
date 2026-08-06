@@ -11,10 +11,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: My first step
+      - name: Initialize Repo
         run: |
          echo "This is DevOps Molvi"
          uname -a
+
+          - name: Check the Docker installation
+          run: |
+          docker 
+          docker images
+
+         - name: Run Docker Container
+          run: |
+          docker run hello-world
         
         
     
